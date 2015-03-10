@@ -1,0 +1,23 @@
+{
+  "name": "ChiliPI",
+  "version": "1.0.0",
+  "description": "Chilifarm monitor with respberry pi",
+  "main": "server.js",
+  "scripts": {
+    "test": "server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PentiaLabs/ChiliPI.git"
+  },
+  "keywords": [
+    "chili",
+    "pentia"
+  ],
+  "author": "Pentia",
+  "license": "None",
+  "bugs": {
+    "url": "https://github.com/PentiaLabs/ChiliPI/issues"
+  },
+  "homepage": "https://github.com/PentiaLabs/ChiliPI"
+}
