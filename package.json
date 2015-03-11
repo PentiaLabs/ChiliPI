@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/PentiaLabs/ChiliPI/issues"
   },
-  "homepage": "https://github.com/PentiaLabs/ChiliPI"
+  "homepage": "https://github.com/PentiaLabs/ChiliPI",
+  "devDependencies": {
+    "ds18b20": "0.0.2"
+  }
 }
