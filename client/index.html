@@ -1,0 +1,58 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Chilifarm @ Pentia</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <main>
+            <h1>Chilifarm</h1>
+
+            <!-- Add your site or application content here -->
+            <h3>Humidity</h3>
+            <p class="reading-humidity"><span>--</span>%</p>
+
+            <h3>Inside</h3>
+            <p class="reading-inside"><span>--</span>°C<p>
+
+            <h3>Outside</h3>
+            <p class="reading-outside"><span>--</span>°C</p>
+        </main>
+
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            (function () {
+                var socket = io();
+
+                socket.on('data', function (data) {
+                    console.log(data);
+                    var elhumidity = document.querySelector('.reading-humidity span');
+                    elhumidity.innerHTML = data.humidity;
+
+                    var elinside = document.querySelector('.reading-inside span');
+                    elinside.innerHTML = data.inside;
+
+                    var eloutside = document.querySelector('.reading-outside span');
+                    eloutside.innerHTML = data.outside;
+                });
+               
+            })();
+        </script>
+
+    </body>
+</html>

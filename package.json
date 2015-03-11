@@ -23,5 +23,9 @@
   "devDependencies": {
     "ds18b20": "0.0.2",
     "node-dht-sensor": "*"
+  },
+  "dependencies": {
+    "express": "^4.12.2",
+    "socket.io": "^1.3.5"
   }
 }
